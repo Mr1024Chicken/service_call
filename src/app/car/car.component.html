@@ -1,0 +1,31 @@
+<p>car works!</p>
+<section>
+    <header>
+      <h1 class="text-center">Car Service</h1>
+    </header>
+    <nav class="nav justify-content-center">
+      <button (click)="getCar()">All Car</button>
+      <button (click)="getByPrice()">Top 3</button>
+    </nav>
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Make</th>
+                <th scope="col">Model</th>
+                <th scope="col">Door</th>
+                <th scope="col">Price</th>
+                <th scope="col">Year</th>
+              </tr>
+            </thead>
+            <tbody *ngFor = "let car of cars">
+              <tr>
+                <td>{{car.make}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.doors}}</td>
+                <td>{{car.price}}</td>
+                <td>{{car.year}}</td>
+              </tr>
+            </tbody>
+          </table>
+    
+</section>
